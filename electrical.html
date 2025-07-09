@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Electrical Design | Spindrift Marine Designs</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- BANNER -->
+    <header id="site-banner" style="
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;">
+      <a href="index.html"><img src="images/logotext1.png" alt="Spindrift Marine Designs" style="max-height: 60px;" /></a>
+      <button id="menu-toggle" style="
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: white;
+        font-size: 2rem;">&#9776;</button>
+      <nav id="site-nav" class="hidden">
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#store">Store</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main" style="padding-top: 120px;">
+      <!-- Force article to be visible -->
+      <article class="active" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+        <h2 class="major">Marine Electrical Design & Consulting</h2>
+        <p>Spindrift Marine Designs provides end-to-end support for marine electrical systems, from conceptual planning to component sourcing. Whether you're building from scratch, modernizing, or troubleshooting, we help ensure your system is safe, efficient, and reliable.</p>
+        <ul>
+          <li>Complete redesigns tailored to your vessel's needs</li>
+          <li>Electrical schematics, load calculations, and optimization</li>
+          <li>Parts sourcing, materials specification, and documentation</li>
+          <li>Consulting for owners, builders, and retrofits</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p class="copyright">&copy; 2025 Spindrift Marine Designs. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Background -->
+  <div id="bg"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Menu Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('mouseenter', () => {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '60px';
+      nav.style.right = '1rem';
+      nav.style.backgroundColor = '#000';
+      nav.style.padding = '1rem';
+    });
+
+    document.getElementById('site-banner').addEventListener('mouseleave', () => {
+      nav.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

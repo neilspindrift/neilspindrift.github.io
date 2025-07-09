@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1348,11 +1351,56 @@ input, select, textarea {
 				padding-left: 0;
 				border-left: solid 1px #ffffff;
 			}
-
+/*  */
 				#header nav ul li:first-child {
 					border-left: 0;
 				}
+/* ADDED FOR BANNER NAVIGATION */
+#menu-toggle {
+	cursor: pointer;
+  }
+  
+  #site-nav {
+	display: none; /* hide nav by default */
+	position: absolute;
+	top: 60px; /* below banner */
+	right: 1rem;
+	background-color: rgba(255, 255, 255, 0.075);
+	padding: 1rem;
+	border-radius: 4px;
+  }
+  
+  #site-banner:hover #site-nav {
+	display: block; /* show nav when hovering over banner */
+  }
+  #site-nav ul {
+	list-style-type: none; /* no bullets */
+	margin: 0;
+	padding: 0;
+  }
+  
+  #site-nav ul li {/* USE THIS FOR EDITING HAMBURGER MENU LINKS */
+	margin: 0.3rem 0; /* vertical spacing between links */
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+  }
 
+				nav ul li a {
+					color: white;
+					text-decoration: none;
+					font-weight: normal;
+					font-family: "Source Sans Pro", sans-serif;
+					padding: 0.2rem 0.5rem; /* keeps clickable area comfy */
+				  }
+								  
+				  nav ul li a:hover {
+					background-color: rgba(255, 255, 255, 0.075);
+					color: black;
+					text-decoration: none;
+					border-radius: 3px;
+					transition: background-color 0.3s ease; /* optional: smooth fade */
+				  }
+/* END FOR BANNER NAVIGATION */
 				#header nav ul li a {
 					display: block;
 					min-width: 7.5rem;
@@ -1372,6 +1420,7 @@ input, select, textarea {
 					#header nav ul li a:active {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
+
 
 		#header nav.use-middle:after {
 			content: '';
@@ -1656,3 +1705,23 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+
+		/* Responsive styles for banner and nav */
+@media (max-width: 768px) {
+	#site-banner {
+	  flex-direction: column;
+	  height: auto;
+	  padding: 0.5rem 1rem;
+	}
+  
+	#site-banner img {
+	  margin-bottom: 0.5rem;
+	  max-height: 60px;
+	}
+  
+	#site-banner nav {
+	  justify-content: center;
+	}
+  }
+  

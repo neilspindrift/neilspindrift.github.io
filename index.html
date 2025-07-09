@@ -21,6 +21,48 @@
 	<!-- Wrapper -->
 	<div id="wrapper">
 
+		<!-- BANNER header.html -->
+
+		<header id="site-banner" style="
+    background-color: #000; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0.5rem 1rem; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;">
+
+			<img src="images/logotext1.png" alt="Spindrift Marine Designs" style="max-height: 60px;" />
+
+			<!-- Hamburger Menu Icon -->
+			<button id="menu-toggle" style="
+      background: none; 
+      border: none; 
+      cursor: pointer; 
+      outline: none; 
+      color: white; 
+      font-size: 2rem;">
+				&#9776;
+			</button>
+
+			<!-- Hidden nav menu -->
+			<nav id="site-nav" class="hidden">
+				<ul>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#store">Store</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		</header>
+		<!-- end of banner -->
+
+
 		<!-- Header -->
 		<header id="header">
 			<div class="logo">
@@ -37,7 +79,8 @@
 				<ul>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#projects">Projects</a></li>
-					<li><a href="#about">About</a></li>
+					<li><a href="#store">Store</a></li>
+					<li><a href="#about">About Us</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
@@ -51,25 +94,39 @@
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">About</h2>
+				<h2 class="major">About Us</h2>
 				<span class="image main">
 					<img src="images/about.jpg" alt="Neil Warrington"
 						style="float: left; width: 300px; margin-right: 15px;" />
 				</span>
 
-				<p><strong>Neil </strong> is a mechanical engineer with a deep-rooted passion for marine
-					systems. Raised on the Canadian prairies and shaped by a background in construction, Neil brings a
-					practical, solution-oriented mindset to even the most complex problems. His work blends creativity
-					with precision, guided by a relentless attention to detail.</p>
-				<p>Spindrift Marine Designs is a one-man operation driven by quality and backed by an extensive network
-					of partners, suppliers, and trades — making custom marine solutions accessible, durable, and
-					dependable.</p>
-			</article>
+				<p><strong>Neil</strong> is a mechanical engineer with a deep-rooted passion for marine systems.
+					Raised on the Canadian prairies and shaped by a background in construction, Neil brings a practical,
+					solution-oriented mindset to even the most complex problems. His work blends creativity with
+					precision,
+					guided by a relentless attention to detail.</p>
+				<p>Spindrift Marine Designs delivers high-quality custom marine solutions through
+					a flexible, hands-on approach and a strong network of trusted partners, suppliers,
+					and skilled trades. Every project is built for durability, performance, and seamless integration.
+				</p>
 
+			</article>
+			<!-- Store -->
+			<article id="store">
+				<h2 class="major">Store</h2>
+				<span class="image main"><img src="images/store1.jpg" alt="Spindrift Marine Services" /></span>
+				<ul>
+					<li><a href="#victron">Victron</a></li>
+					<li><a href="#epoch">Epoch Batteries</a></li>
+
+				</ul>
+			</article>
 			<!-- Services -->
 			<article id="services">
 				<h2 class="major">Services</h2>
-				<span class="image main"><img src="images/services1.jpg" alt="Spindrift Marine Services" /></span>
+				<span class="image main"><img src="images/services1.jpg" alt="Spindrift Marine Services"
+						style="float: left; width: 300px; margin-right: 15px;" />
+				</span>
 				<ul>
 					<li><a href="#electrical">Marine Electrical Design & Consulting</a></li>
 					<li><a href="#fabrication">Custom Fabrication & Component Manufacturing</a></li>
@@ -161,7 +218,7 @@
 					<input type="hidden" name="_captcha" value="false" />
 					<input type="hidden" name="_next" value="https://spindriftmarinedesigns.com/thankyou.html" />
 					<!-- Customize email subject -->
-<input type="hidden" name="_subject" value="New contact form submission">
+					<input type="hidden" name="_subject" value="New contact form submission">
 
 
 					<div class="fields">
@@ -453,6 +510,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<!-- JAVAVSCRIPT CODE FOR MOBILE MENU -->
+	<script>
+		// Find the hamburger button and the navigation list
+		const menuToggle = document.getElementById('menu-toggle');
+		const nav = document.querySelector('nav ul');
+
+		// When the hamburger is clicked, toggle showing/hiding the menu
+		menuToggle.addEventListener('click', () => {
+			if (nav.style.display === 'flex') {
+				// Hide the menu if it is currently shown
+				nav.style.display = 'none';
+			} else {
+				// Show the menu and style it for mobile dropdown
+				nav.style.display = 'flex';
+				nav.style.flexDirection = 'column';
+				nav.style.position = 'absolute';
+				nav.style.top = '60px';       // Just below the banner
+				nav.style.right = '1rem';     // Right aligned
+				nav.style.backgroundColor = '#000';
+				nav.style.padding = '1rem';
+			}
+		});
+	</script>
+	<!-- END OF JAVAVSCRIPT CODE FOR MOBILE MENU -->
 
 </body>
 

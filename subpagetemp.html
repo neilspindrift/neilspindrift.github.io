@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Electrical Design – Spindrift Marine Designs</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Fixed Black Banner -->
+		<header id="site-banner" style="background-color: #000; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+			<img src="images/logotext1.png" alt="Spindrift Marine Designs" style="max-height: 60px;" />
+			<button id="menu-toggle" style="background: none; border: none; cursor: pointer; color: white; font-size: 2rem;">&#9776;</button>
+			<nav id="site-nav" class="hidden">
+				<ul>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#store">Store</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main Content -->
+		<div id="main" style="margin-top: 100px;">
+			<article>
+				<h2 class="major">Electrical Design & Consulting</h2>
+				<span class="image main"><img src="images/services1.jpg" alt="Marine Electrical" /></span>
+				<ul>
+					<li>Complete redesigns tailored to your vessel's needs</li>
+					<li>Electrical schematics, load calculations, and optimization</li>
+					<li>Parts sourcing, materials specification, and documentation</li>
+					<li>Consulting for owners, builders, and retrofits</li>
+				</ul>
+			</article>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy;2025 Spindrift Marine Designs. All rights reserved.</p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<!-- Hamburger Toggle Script -->
+	<script>
+		const menuToggle = document.getElementById('menu-toggle');
+		const nav = document.querySelector('#site-nav ul');
+
+		menuToggle.addEventListener('click', () => {
+			if (nav.style.display === 'flex') {
+				nav.style.display = 'none';
+			} else {
+				nav.style.display = 'flex';
+				nav.style.flexDirection = 'column';
+				nav.style.position = 'absolute';
+				nav.style.top = '60px';
+				nav.style.right = '1rem';
+				nav.style.backgroundColor = '#000';
+				nav.style.padding = '1rem';
+			}
+		});
+	</script>
+</body>
+</html>
